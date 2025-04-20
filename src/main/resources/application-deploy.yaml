@@ -1,0 +1,58 @@
+spring:
+  datasource:
+    url: jdbc:mysql://rdsstudyemploy.c7gmus2cs4zw.ap-southeast-2.rds.amazonaws.com:3306
+    username: admin
+    password: LJmc1X8q0Ck5M32xBrLh
+server:
+  port: 80
+#sudo apt install mysql-client -y
+# mysql -h rdsstudyemploy.c7gmus2cs4zw.ap-southeast-2.rds.amazonaws.com -P 3306 -u admin -p
+
+
+# ec2 upload
+#pem key modify
+#chmod 400 /Users/som/Desktop/springbootstudykey.pem
+
+#scp [option] [Identify File] [sendFile] [EC2 host_name]@[EC2 public ip]:[receive folder]
+#scp -v -i /Users/som/Desktop/springbootstudykey.pem /Users/som/studentProject/spring_boot_study/l06_spring_jpa_emp_final/src/main/resources/application-deploy.yaml user@13.239.234.124:/home/ubuntu/tj703_spring_jpa_emp/src/main/resources
+
+# ssh-keygen -y -f /Users/som/Desktop/springbootstudykey.pem
+
+#cloud-config
+#cloud_final_modules:
+#  - [users-groups, once]
+#users:
+#  - name: user
+#    ssh-authorized-keys:
+#      -ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDvzEjA912pZ0qoR7GAmdUTQR1AlQYcx7RK86PTqtnih/JqGYtElPRMmjhuBbJDE7lII1QUmwdvIQ6eyn6B/Q2AmXqsvydTPrRqn8I4rlCs7oSOrNXl+YxFum7ewXE6Bx0fENsWY4z/FaQDevvKWLvLlabzSN4gfQUzXVWDSb95oPbpHbBLgfMIKTyaLa1McXLOzfoWBadcoKor5onrloTQaYDSLhcN2EvS6oFFfpasCDu/27+/MHLDvql7QmnYYkPeE0A1F1h9mzzZtyUvbaicW1DPR2smg4xo+rSkdttuAMaSPxAp/Zg6OT4jlZd0rLRvuuv9soPnH/JSmPUrg74T
+
+
+#ec2
+#sudo adduser user
+#sudo mkdir /home/user/.ssh
+#sudo nano /home/user/.ssh/authorized_keys
+## → 여기에 public key 붙이기
+#
+#sudo chown -R user:user /home/user
+#sudo chmod 700 /home/user/.ssh
+#sudo chmod 600 /home/user/.ssh/authorized_keys
+#grep user /etc/passwd
+# sudo chown -R user:user /home/ubuntu
+# sudo chmod -R 755 /home/ubuntu
+
+#my computer terminal
+#ssh -i ~/Desktop/springbootstudykey.pem user@13.239.234.124
+
+# ec2
+# sudo apt install -y zip unzip curl
+
+# sudo chown -R ubuntu:ubuntu /home/ubuntu
+# curl -s "https://get.sdkman.io" | bash
+#echo 'source "$HOME/.sdkman/bin/sdkman-init.sh"' >> ~/.bashrc
+#source ~/.bashrc
+#sdk install gradle 8.13
+# gradle -v
+
+# cd /springProject
+# gradle build
+# gradle bootRun
